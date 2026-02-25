@@ -106,10 +106,10 @@ function Athletes() {
           {/* ── Grid de cards de atletas ── */}
           {filteredAthletes.length > 0 ? (
             <div className="row g-4">
-              {filteredAthletes.map((athlete, index) => (
+              {filteredAthletes.map((athlete) => (
                 <div
                   key={athlete.id}
-                  className={`col-lg-3 col-md-6 animate-fade-in animate-delay-${(index % 5) + 1}`}
+                  className="col-lg-3 col-md-6"
                 >
                   <AthleteCard athlete={athlete} />
                 </div>

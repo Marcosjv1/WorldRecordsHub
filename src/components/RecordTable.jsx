@@ -88,55 +88,34 @@ function RecordTable({ initialFilter = 'todos' }) {
             <tbody>
               {filteredRecords.map((record, index) => (
                 <tr key={record.id}>
-                  {/* Número de fila */}
                   <td>
-                    <span
-                      style={{
-                        color: 'rgba(255,255,255,0.3)',
-                        fontSize: '0.85rem',
-                        fontWeight: 600,
-                      }}
-                    >
+                    <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.85rem', fontWeight: 600 }}>
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </td>
-
-                  {/* Deporte */}
                   <td>
                     <span className="record-sport-badge">
-                      <span role="img" aria-label={record.sport}>
-                        {record.icon}
-                      </span>
+                      <span role="img" aria-label={record.sport}>{record.icon}</span>
                       {record.sport}
                     </span>
                   </td>
-
-                  {/* Prueba */}
                   <td>
                     <span style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 500 }}>
                       {record.event}
                     </span>
                   </td>
-
-                  {/* Récord */}
                   <td>
                     <span className="record-value">{record.record}</span>
                   </td>
-
-                  {/* Atleta */}
                   <td>
                     <span className="record-athlete-name">{record.athlete}</span>
                   </td>
-
-                  {/* País */}
                   <td>
                     <span>
                       <span className="record-country-flag">{record.flag}</span>
                       {record.country}
                     </span>
                   </td>
-
-                  {/* Año */}
                   <td>
                     <span className="record-year-badge">{record.year}</span>
                   </td>
@@ -145,37 +124,12 @@ function RecordTable({ initialFilter = 'todos' }) {
             </tbody>
           </table>
         ) : (
-          /* Mensaje cuando no hay resultados */
-          <div
-            style={{
-              textAlign: 'center',
-              padding: '3rem',
-              color: 'rgba(255,255,255,0.4)',
-            }}
-          >
-            <i
-              className="bi bi-search"
-              style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}
-            ></i>
+          <div style={{ textAlign: 'center', padding: '3rem', color: 'rgba(255,255,255,0.4)' }}>
+            <i className="bi bi-search" style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}></i>
             <p>No se encontraron récords para este deporte.</p>
           </div>
         )}
       </div>
-
-      {/* ── Nota al pie de la tabla ── */}
-      <p
-        style={{
-          textAlign: 'center',
-          color: 'rgba(255,255,255,0.3)',
-          fontSize: '0.78rem',
-          marginTop: '1.5rem',
-          letterSpacing: '0.5px',
-        }}
-      >
-        <i className="bi bi-info-circle me-1"></i>
-        Datos basados en récords oficiales reconocidos por federaciones internacionales.
-        Algunos datos son simulados con coherencia histórica.
-      </p>
     </div>
   )
 }

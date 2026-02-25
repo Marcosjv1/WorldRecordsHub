@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Sports from './pages/Sports'
 import Records from './pages/Records'
 import Athletes from './pages/Athletes'
+import Search from './pages/Search'
 
 /**
  * Componente principal de la aplicación.
@@ -22,6 +23,7 @@ function App() {
           <Route path="/deportes" element={<Sports />} />
           <Route path="/records" element={<Records />} />
           <Route path="/atletas" element={<Athletes />} />
+          <Route path="/buscar" element={<Search />} />
         </Routes>
       </main>
     </Router>

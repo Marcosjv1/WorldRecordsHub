@@ -95,6 +95,15 @@ function Navbar() {
               <i className="bi bi-person-fill me-1"></i>
               Atletas
             </NavLink>
+            <NavLink
+              to="/buscar"
+              className={({ isActive }) =>
+                `nav-link-custom nav-link-api ${isActive ? 'active' : ''}`
+              }
+            >
+              <i className="bi bi-search me-1"></i>
+              Buscar
+            </NavLink>
           </div>
         </div>
 
@@ -148,6 +157,16 @@ function Navbar() {
             >
               <i className="bi bi-person-fill me-2"></i>
               Atletas
+            </NavLink>
+            <NavLink
+              to="/buscar"
+              className={({ isActive }) =>
+                `nav-link-custom nav-link-api ${isActive ? 'active' : ''}`
+              }
+              onClick={handleNavClick}
+            >
+              <i className="bi bi-search me-2"></i>
+              Buscar
             </NavLink>
           </div>
         </div>

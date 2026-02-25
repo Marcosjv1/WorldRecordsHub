@@ -35,7 +35,7 @@ function Home() {
 
           <div className="row g-4 justify-content-center">
             {/* Feature 1 */}
-            <div className="col-lg-4 col-md-6 animate-fade-in animate-delay-1">
+            <div className="col-lg-4 col-md-6">
               <div className="feature-card">
                 <i className="bi bi-trophy-fill feature-icon"></i>
                 <h4 className="feature-title">Récords Oficiales</h4>
@@ -61,8 +61,8 @@ function Home() {
           </p>
 
           <div className="row g-3 mb-4">
-            {featuredRecords.map((record, index) => (
-              <div key={record.id} className={`col-lg-6 animate-fade-in animate-delay-${index + 1}`}>
+            {featuredRecords.map((record) => (
+              <div key={record.id} className="col-lg-6">
                 <div className="record-preview-card">
                   {/* Ícono del deporte */}
                   <div className="record-preview-icon">
@@ -100,12 +100,7 @@ function Home() {
       </section>
 
       {/* ── Sección Deportes Preview ── */}
-      <section
-        style={{
-          padding: '5rem 0',
-          background: 'linear-gradient(180deg, #16213e 0%, #1a1a2e 100%)',
-        }}
-      >
+      <section style={{ padding: '4rem 0', backgroundColor: '#16213e' }}>
         <div className="container">
           <h2 className="section-title">
             Nuestros <span>Deportes</span>
@@ -116,10 +111,10 @@ function Home() {
           </p>
 
           <div className="row g-4">
-            {featuredSports.map((sport, index) => (
+            {featuredSports.map((sport) => (
               <div
                 key={sport.id}
-                className={`col-lg-4 col-md-6 animate-fade-in animate-delay-${index + 1}`}
+                className="col-lg-4 col-md-6"
               >
                 <SportCard sport={sport} />
               </div>
@@ -137,47 +132,10 @@ function Home() {
       </section>
 
       {/* ── Sección CTA (Call to Action) ── */}
-      <section
-        style={{
-          padding: '5rem 0',
-          background: 'linear-gradient(135deg, #0f3460 0%, #e94560 100%)',
-          textAlign: 'center',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        {/* Fondo decorativo */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'radial-gradient(circle at 30% 50%, rgba(245,166,35,0.15) 0%, transparent 60%)',
-          }}
-        ></div>
-
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <h2
-            style={{
-              fontFamily: 'Oswald, sans-serif',
-              fontSize: 'clamp(1.8rem, 4vw, 3rem)',
-              fontWeight: 700,
-              color: '#fff',
-              letterSpacing: '2px',
-              marginBottom: '1rem',
-            }}
-          >
-            ¿Listo para explorar los límites humanos?
-          </h2>
-          <p
-            style={{
-              color: 'rgba(255,255,255,0.8)',
-              fontSize: '1.1rem',
-              maxWidth: '550px',
-              margin: '0 auto 2rem',
-              lineHeight: 1.7,
-            }}
-          >
+      <section style={{ padding: '4rem 0', backgroundColor: '#0f3460', textAlign: 'center' }}>
+        <div className="container">
+          <h2 className="section-title">¿Listo para explorar los límites humanos?</h2>
+          <p className="section-subtitle">
             Descubre los récords que han marcado la historia del deporte olímpico
             y conoce a los atletas detrás de cada hazaña.
           </p>
