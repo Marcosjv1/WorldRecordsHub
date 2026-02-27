@@ -1,8 +1,3 @@
-/**
- * Datos estáticos de los deportes olímpicos.
- * Incluye imagen, descripción y número de récords por deporte.
- * Imágenes de Unsplash - libres de derechos.
- */
 export const sportsData = [
   {
     id: 1,

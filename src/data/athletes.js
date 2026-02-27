@@ -1,10 +1,4 @@
-/**
- * Datos estáticos de los atletas con récords mundiales.
- * Imágenes de Wikipedia Commons - fotos reales de los atletas.
- * 20 atletas cubriendo 9 disciplinas olímpicas.
- */
 export const athletesData = [
-  // ── ATLETISMO ──────────────────────────────────────────────
   {
     id: 1,
     name: 'Usain Bolt',
@@ -89,7 +83,6 @@ export const athletesData = [
     bio: 'Rompió el récord mundial de 400m en los Juegos Olímpicos de Río 2016, corriendo desde el carril 8.',
     medals: '1 Oro Olímpico',
   },
-  // ── NATACIÓN ──────────────────────────────────────────────
   {
     id: 7,
     name: 'Michael Phelps',
@@ -146,7 +139,6 @@ export const athletesData = [
     bio: 'Primer nadador en bajar de 57 segundos en los 100m pecho. Dominó la prueba durante casi una década.',
     medals: '3 Oros Olímpicos',
   },
-  // ── MARATÓN ──────────────────────────────────────────────
   {
     id: 11,
     name: 'Eliud Kipchoge',
@@ -189,7 +181,6 @@ export const athletesData = [
     bio: 'Estableció el récord mundial de maratón en Chicago 2023 con un tiempo de 2:00:35, el más rápido de la historia.',
     medals: '1 Récord Mundial',
   },
-  // ── LEVANTAMIENTO DE PESAS ────────────────────────────────
   {
     id: 14,
     name: 'Lasha Talakhadze',
@@ -204,7 +195,6 @@ export const athletesData = [
     bio: 'El hombre más fuerte del mundo en halterofilia. Posee todos los récords mundiales en la categoría +109kg.',
     medals: '3 Oros Olímpicos',
   },
-  // ── CICLISMO ──────────────────────────────────────────────
   {
     id: 15,
     name: 'Filippo Ganna',
@@ -219,7 +209,6 @@ export const athletesData = [
     bio: 'Cuatro veces campeón mundial de contrarreloj en pista. Uno de los ciclistas más dominantes de la era moderna.',
     medals: '1 Oro Olímpico',
   },
-  // ── GIMNASIA ──────────────────────────────────────────────
   {
     id: 16,
     name: 'Simone Biles',
@@ -248,7 +237,6 @@ export const athletesData = [
     bio: 'Considerado el mejor gimnasta masculino de la historia. Ganó el all-around mundial 6 veces consecutivas.',
     medals: '3 Oros Olímpicos',
   },
-  // ── JUDO ──────────────────────────────────────────────────
   {
     id: 18,
     name: 'Teddy Riner',
@@ -263,7 +251,6 @@ export const athletesData = [
     bio: 'El judoka más dominante de la historia. Ganó 10 títulos mundiales y 3 medallas de oro olímpicas.',
     medals: '3 Oros Olímpicos',
   },
-  // ── TIRO CON ARCO ─────────────────────────────────────────
   {
     id: 19,
     name: 'Im Dong-hyun',
@@ -278,7 +265,6 @@ export const athletesData = [
     bio: 'Estableció el récord mundial de clasificación en los Juegos Olímpicos de Londres 2012, siendo legalmente ciego.',
     medals: '3 Oros Olímpicos',
   },
-  // ── BOXEO ─────────────────────────────────────────────────
   {
     id: 20,
     name: 'Julio César Chávez',

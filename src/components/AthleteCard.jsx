@@ -1,13 +1,6 @@
-/**
- * Componente AthleteCard - Tarjeta simple de atleta.
- * Muestra imagen, nombre y deporte del atleta.
- *
- * @param {Object} athlete - Objeto con datos del atleta
- */
 function AthleteCard({ athlete }) {
   return (
     <div className="athlete-card">
-      {/* Imagen del atleta */}
       <div className="athlete-card-img-wrapper">
         <img
           src={athlete.image}
@@ -21,7 +14,6 @@ function AthleteCard({ athlete }) {
         />
       </div>
 
-      {/* Nombre */}
       <div className="athlete-card-body">
         <h3 className="athlete-card-name">{athlete.name}</h3>
       </div>

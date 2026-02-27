@@ -1,15 +1,10 @@
 import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
-/**
- * Componente Navbar - Barra de navegación fija.
- * Incluye logo, enlaces de navegación y menú hamburguesa para móvil.
- */
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
-  // Detectar scroll para cambiar estilo del navbar
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
@@ -18,7 +13,6 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Cerrar menú al hacer clic en un enlace
   const handleNavClick = () => {
     setMenuOpen(false)
   }
@@ -34,13 +28,11 @@ function Navbar() {
       <div className="container">
         <div className="d-flex justify-content-between align-items-center w-100">
 
-          {/* ── Logo / Brand ── */}
           <Link to="/deportes" className="navbar-brand-custom" onClick={handleNavClick}>
             <i className="bi bi-trophy-fill brand-icon"></i>
             World<span className="brand-accent">Records</span>Hub
           </Link>
 
-          {/* ── Botón hamburguesa (móvil) ── */}
           <button
             className="navbar-toggler-custom d-lg-none"
             style={{
@@ -56,7 +48,6 @@ function Navbar() {
             ></i>
           </button>
 
-          {/* ── Links de navegación (desktop) ── */}
           <div className="d-none d-lg-flex align-items-center gap-1">
             <NavLink
               to="/deportes"
@@ -78,7 +69,6 @@ function Navbar() {
           </div>
         </div>
 
-        {/* ── Menú móvil desplegable ── */}
         <div
           className={`d-lg-none ${menuOpen ? 'd-block' : 'd-none'}`}
           style={{
