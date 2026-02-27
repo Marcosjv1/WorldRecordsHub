@@ -14,7 +14,7 @@ function Hero() {
           {/* Badge superior */}
           <div className="hero-badge">
             <i className="bi bi-trophy-fill me-2"></i>
-            Récords Mundiales Olímpicos
+            Récords Mundiales Olímpics
           </div>
 
           {/* Título principal */}
@@ -39,26 +39,6 @@ function Hero() {
               <i className="bi bi-person-fill me-2"></i>
               Ver Atletas
             </Link>
-          </div>
-
-          {/* Estadísticas rápidas */}
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <span className="hero-stat-number">18+</span>
-              <span className="hero-stat-label">Récords</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-number">6</span>
-              <span className="hero-stat-label">Deportes</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-number">8</span>
-              <span className="hero-stat-label">Atletas</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-number">12+</span>
-              <span className="hero-stat-label">Países</span>
-            </div>
           </div>
         </div>
       </div>

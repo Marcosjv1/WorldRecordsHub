@@ -47,9 +47,6 @@ function Search() {
           <h1 className="page-header-title">
             <span>Buscar</span> Atletas
           </h1>
-          <p className="page-header-subtitle">
-            Busca información de cualquier atleta del mundo
-          </p>
         </div>
       </div>
 
@@ -145,9 +142,6 @@ function Search() {
               <p style={{ color: 'rgba(255,255,255,0.4)', marginTop: '1rem' }}>
                 No se encontraron atletas para <strong style={{ color: '#f5a623' }}>"{query}"</strong>
               </p>
-              <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.85rem' }}>
-                Intenta buscar en inglés.
-              </p>
             </div>
           )}
 
@@ -193,41 +187,12 @@ function Search() {
                           <span className="player-sport-tag">{player.strSport}</span>
                         )}
 
-                        {player.strNationality && (
-                          <p className="player-info">
-                            <i className="bi bi-globe me-1"></i>
-                            {player.strNationality}
-                          </p>
-                        )}
-
-                        {player.strPosition && (
-                          <p className="player-info">
-                            <i className="bi bi-person-badge me-1"></i>
-                            {player.strPosition}
-                          </p>
-                        )}
-
-                        {player.dateBorn && (
-                          <p className="player-info">
-                            <i className="bi bi-calendar me-1"></i>
-                            {player.dateBorn}
-                          </p>
-                        )}
-
-                        {(player.strDescriptionES || player.strDescriptionEN) && (
-                          <p className="player-bio">
-                            {(player.strDescriptionES || player.strDescriptionEN).slice(0, 150)}
-                            {(player.strDescriptionES || player.strDescriptionEN).length > 150 ? '...' : ''}
-                          </p>
-                        )}
-
                         <a
                           href={`https://www.thesportsdb.com/player/${player.idPlayer}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="player-link"
                         >
-                          <i className="bi bi-box-arrow-up-right me-1"></i>
                           Ver perfil completo
                         </a>
                       </div>

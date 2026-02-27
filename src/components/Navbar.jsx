@@ -35,7 +35,7 @@ function Navbar() {
         <div className="d-flex justify-content-between align-items-center w-100">
 
           {/* ── Logo / Brand ── */}
-          <Link to="/" className="navbar-brand-custom" onClick={handleNavClick}>
+          <Link to="/deportes" className="navbar-brand-custom" onClick={handleNavClick}>
             <i className="bi bi-trophy-fill brand-icon"></i>
             World<span className="brand-accent">Records</span>Hub
           </Link>
@@ -59,41 +59,12 @@ function Navbar() {
           {/* ── Links de navegación (desktop) ── */}
           <div className="d-none d-lg-flex align-items-center gap-1">
             <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? 'active' : ''}`
-              }
-            >
-              <i className="bi bi-house-fill me-1"></i>
-              Inicio
-            </NavLink>
-            <NavLink
               to="/deportes"
               className={({ isActive }) =>
                 `nav-link-custom ${isActive ? 'active' : ''}`
               }
             >
-              <i className="bi bi-grid-fill me-1"></i>
               Deportes
-            </NavLink>
-            <NavLink
-              to="/records"
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? 'active' : ''}`
-              }
-            >
-              <i className="bi bi-bar-chart-fill me-1"></i>
-              Récords
-            </NavLink>
-            <NavLink
-              to="/atletas"
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? 'active' : ''}`
-              }
-            >
-              <i className="bi bi-person-fill me-1"></i>
-              Atletas
             </NavLink>
             <NavLink
               to="/buscar"
@@ -118,45 +89,13 @@ function Navbar() {
         >
           <div className="d-flex flex-column gap-1">
             <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? 'active' : ''}`
-              }
-              onClick={handleNavClick}
-            >
-              <i className="bi bi-house-fill me-2"></i>
-              Inicio
-            </NavLink>
-            <NavLink
               to="/deportes"
               className={({ isActive }) =>
                 `nav-link-custom ${isActive ? 'active' : ''}`
               }
               onClick={handleNavClick}
             >
-              <i className="bi bi-grid-fill me-2"></i>
               Deportes
-            </NavLink>
-            <NavLink
-              to="/records"
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? 'active' : ''}`
-              }
-              onClick={handleNavClick}
-            >
-              <i className="bi bi-bar-chart-fill me-2"></i>
-              Récords
-            </NavLink>
-            <NavLink
-              to="/atletas"
-              className={({ isActive }) =>
-                `nav-link-custom ${isActive ? 'active' : ''}`
-              }
-              onClick={handleNavClick}
-            >
-              <i className="bi bi-person-fill me-2"></i>
-              Atletas
             </NavLink>
             <NavLink
               to="/buscar"

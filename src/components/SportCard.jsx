@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom'
-
 /**
  * Componente SportCard - Tarjeta individual de deporte.
- * Muestra imagen, nombre, descripción y botón para ver récords.
+ * Muestra imagen, nombre y descripción del deporte.
  *
  * @param {Object} sport - Objeto con datos del deporte
  */
@@ -24,13 +22,6 @@ function SportCard({ sport }) {
         />
         {/* Overlay degradado */}
         <div className="sport-card-overlay"></div>
-
-        {/* Ícono del deporte */}
-        <div className="sport-card-icon">
-          <span role="img" aria-label={sport.name}>
-            {sport.icon}
-          </span>
-        </div>
       </div>
 
       {/* ── Cuerpo de la tarjeta ── */}
@@ -40,41 +31,6 @@ function SportCard({ sport }) {
 
         {/* Descripción */}
         <p className="sport-card-info">{sport.description}</p>
-
-        {/* Contador de récords */}
-        <div className="sport-card-records-count">
-          <i className="bi bi-trophy-fill"></i>
-          {sport.recordsCount} récords mundiales
-        </div>
-
-        {/* Highlights / disciplinas */}
-        <div className="d-flex flex-wrap gap-1 mb-3">
-          {sport.highlights.map((h, index) => (
-            <span
-              key={index}
-              style={{
-                background: 'rgba(255,255,255,0.07)',
-                color: 'rgba(255,255,255,0.6)',
-                fontSize: '0.75rem',
-                padding: '2px 10px',
-                borderRadius: '50px',
-                border: '1px solid rgba(255,255,255,0.1)',
-              }}
-            >
-              {h}
-            </span>
-          ))}
-        </div>
-
-        {/* Botón ver récords */}
-        <Link
-          to="/records"
-          className="btn-sport"
-          state={{ filter: sport.key }}
-        >
-          <i className="bi bi-bar-chart-fill me-2"></i>
-          Ver Récords
-        </Link>
       </div>
     </div>
   )

@@ -1,9 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Home from './pages/Home'
 import Sports from './pages/Sports'
-import Records from './pages/Records'
-import Athletes from './pages/Athletes'
 import Search from './pages/Search'
 
 /**
@@ -19,10 +16,10 @@ function App() {
       {/* Contenido principal con las rutas */}
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/deportes" replace />} />
           <Route path="/deportes" element={<Sports />} />
-          <Route path="/records" element={<Records />} />
-          <Route path="/atletas" element={<Athletes />} />
+          <Route path="/atletas" element={<Navigate to="/deportes" replace />} />
+          <Route path="/records" element={<Navigate to="/deportes" replace />} />
           <Route path="/buscar" element={<Search />} />
         </Routes>
       </main>

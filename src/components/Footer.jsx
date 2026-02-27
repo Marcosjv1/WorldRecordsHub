@@ -95,10 +95,10 @@ function Footer() {
             <h6 className="footer-heading">Atletas Destacados</h6>
             <div className="d-flex flex-column gap-2">
               {[
-                { name: 'Usain Bolt', record: '9.58s — 100m', flag: '🇯🇲' },
-                { name: 'Eliud Kipchoge', record: '2:01:09 — Maratón', flag: '🇰🇪' },
-                { name: 'Katie Ledecky', record: '3:56.46 — 400m Libre', flag: '🇺🇸' },
-                { name: 'Simone Biles', record: '59.798 pts — All-Around', flag: '🇺🇸' },
+                { name: 'Usain Bolt', country: 'Jamaica', record: '9.58s — 100m' },
+                { name: 'Eliud Kipchoge', country: 'Kenia', record: '2:01:09 — Maratón' },
+                { name: 'Katie Ledecky', country: 'Estados Unidos', record: '3:56.46 — 400m Libre' },
+                { name: 'Simone Biles', country: 'Estados Unidos', record: '59.798 pts — All-Around' },
               ].map((a, i) => (
                 <div
                   key={i}
@@ -110,7 +110,6 @@ function Footer() {
                     borderBottom: '1px solid rgba(255,255,255,0.06)',
                   }}
                 >
-                  <span style={{ fontSize: '1.2rem' }}>{a.flag}</span>
                   <div>
                     <div
                       style={{
@@ -120,6 +119,9 @@ function Footer() {
                       }}
                     >
                       {a.name}
+                    </div>
+                    <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.72rem' }}>
+                      {a.country}
                     </div>
                     <div style={{ color: '#f5a623', fontSize: '0.78rem' }}>
                       {a.record}

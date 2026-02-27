@@ -1,37 +1,12 @@
-import { useState } from 'react'
-import { worldRecords, sportFilters } from '../data/records'
+import { worldRecords } from '../data/records'
 
 /**
- * Componente RecordTable - Tabla de récords mundiales con filtro por deporte.
- * Usa estado de React para filtrar los récords dinámicamente.
- *
- * @param {string} initialFilter - Filtro inicial (opcional)
+ * Componente RecordTable - Tabla de récords mundiales.
+ * Muestra todos los récords sin filtros.
  */
-function RecordTable({ initialFilter = 'todos' }) {
-  // Estado para el filtro activo
-  const [activeFilter, setActiveFilter] = useState(initialFilter)
-
-  // Filtrar récords según el deporte seleccionado
-  const filteredRecords =
-    activeFilter === 'todos'
-      ? worldRecords
-      : worldRecords.filter((r) => r.sportKey === activeFilter)
-
+function RecordTable() {
   return (
     <div className="records-section">
-      {/* ── Barra de filtros ── */}
-      <div className="filter-bar">
-        {sportFilters.map((filter) => (
-          <button
-            key={filter.key}
-            className={`filter-btn ${activeFilter === filter.key ? 'active' : ''}`}
-            onClick={() => setActiveFilter(filter.key)}
-          >
-            {filter.label}
-          </button>
-        ))}
-      </div>
-
       {/* ── Contador de resultados ── */}
       <p
         style={{
@@ -44,58 +19,30 @@ function RecordTable({ initialFilter = 'todos' }) {
       >
         Mostrando{' '}
         <span style={{ color: '#f5a623', fontWeight: 700 }}>
-          {filteredRecords.length}
+          {worldRecords.length}
         </span>{' '}
-        récord{filteredRecords.length !== 1 ? 's' : ''}
-        {activeFilter !== 'todos' && (
-          <span> en {sportFilters.find((f) => f.key === activeFilter)?.label}</span>
-        )}
+        récord{worldRecords.length !== 1 ? 's' : ''}
       </p>
 
       {/* ── Tabla de récords ── */}
       <div className="records-table-wrapper">
-        {filteredRecords.length > 0 ? (
+        {worldRecords.length > 0 ? (
           <table className="records-table">
             <thead>
               <tr>
-                <th>#</th>
-                <th>
-                  <i className="bi bi-grid-fill me-2"></i>
-                  Deporte
-                </th>
-                <th>
-                  <i className="bi bi-flag-fill me-2"></i>
-                  Prueba
-                </th>
-                <th>
-                  <i className="bi bi-trophy-fill me-2"></i>
-                  Récord
-                </th>
-                <th>
-                  <i className="bi bi-person-fill me-2"></i>
-                  Atleta
-                </th>
-                <th>
-                  <i className="bi bi-geo-alt-fill me-2"></i>
-                  País
-                </th>
-                <th>
-                  <i className="bi bi-calendar-fill me-2"></i>
-                  Año
-                </th>
+                <th>Deporte</th>
+                <th>Prueba</th>
+                <th>Récord</th>
+                <th>Atleta</th>
+                <th>País</th>
+                <th>Año</th>
               </tr>
             </thead>
             <tbody>
-              {filteredRecords.map((record, index) => (
+              {worldRecords.map((record, index) => (
                 <tr key={record.id}>
                   <td>
-                    <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.85rem', fontWeight: 600 }}>
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                  </td>
-                  <td>
-                    <span className="record-sport-badge">
-                      <span role="img" aria-label={record.sport}>{record.icon}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 500 }}>
                       {record.sport}
                     </span>
                   </td>
@@ -105,19 +52,24 @@ function RecordTable({ initialFilter = 'todos' }) {
                     </span>
                   </td>
                   <td>
-                    <span className="record-value">{record.record}</span>
+                    <span style={{ color: '#f5a623', fontWeight: 600 }}>
+                      {record.record}
+                    </span>
                   </td>
                   <td>
-                    <span className="record-athlete-name">{record.athlete}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>
+                      {record.athlete}
+                    </span>
                   </td>
                   <td>
-                    <span>
-                      <span className="record-country-flag">{record.flag}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.7)' }}>
                       {record.country}
                     </span>
                   </td>
                   <td>
-                    <span className="record-year-badge">{record.year}</span>
+                    <span style={{ color: 'rgba(255,255,255,0.6)' }}>
+                      {record.year}
+                    </span>
                   </td>
                 </tr>
               ))}
@@ -125,8 +77,7 @@ function RecordTable({ initialFilter = 'todos' }) {
           </table>
         ) : (
           <div style={{ textAlign: 'center', padding: '3rem', color: 'rgba(255,255,255,0.4)' }}>
-            <i className="bi bi-search" style={{ fontSize: '2.5rem', display: 'block', marginBottom: '1rem' }}></i>
-            <p>No se encontraron récords para este deporte.</p>
+            <p>No se encontraron récords.</p>
           </div>
         )}
       </div>

@@ -268,7 +268,7 @@ body {
 /* ── Features Section ── */
 .features-section {
   padding: 3.5rem 0;
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
 }
 
 .feature-card {
@@ -311,7 +311,7 @@ body {
 }
 
 .record-preview-card {
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
   border: 1px solid var(--borde);
   border-radius: 8px;
   padding: 1rem;
@@ -370,7 +370,7 @@ body {
 
 /* ── Sport Cards ── */
 .sport-card {
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
   border: 1px solid var(--borde);
   border-radius: 8px;
   overflow: hidden;
@@ -492,7 +492,7 @@ body {
 }
 
 .records-table-wrapper {
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--borde);
@@ -575,7 +575,7 @@ body {
 
 /* ── Athlete Cards ── */
 .athlete-card {
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
   border: 1px solid var(--borde);
   border-radius: 8px;
   overflow: hidden;
@@ -681,7 +681,7 @@ body {
 }
 
 .contact-card {
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
   border: 1px solid var(--borde);
   border-radius: 8px;
   padding: 1.8rem;
@@ -938,7 +938,7 @@ body {
 }
 
 .search-box {
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
   border: 1px solid var(--borde);
   border-radius: 8px;
   padding: 1.2rem;
@@ -1101,7 +1101,7 @@ body {
 
 /* Tarjeta de jugador */
 .player-card {
-  background-color: var(--azul-medio);
+  background-color: var(--azul-oscuro);
   border: 1px solid var(--borde);
   border-radius: 8px;
   overflow: hidden;
